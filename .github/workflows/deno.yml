@@ -19,7 +19,7 @@ permissions:
 
 jobs:
   test:
-    runs-on: test
+    runs-on: instanceelk
 
     steps:
       - name: Setup repo
