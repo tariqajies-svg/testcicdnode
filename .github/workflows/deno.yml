@@ -1,0 +1,32 @@
+name: Test Node.js script
+
+on:
+  push:
+    branches:
+      - tariqajies-svg-patch-1
+  pull_request:
+    branches:
+      - tariqajies-svg-patch-1
+
+jobs:
+  test:
+    runs-on: tariq
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Run Node.js script
+        run: |
+          output=$(node main.js)
+          if echo "$output" | grep -q "hello"; then
+            echo "Hello found in output: $output"
+          else
+            echo "Hello not found in output: $output"
+            exit 1
+          fi
