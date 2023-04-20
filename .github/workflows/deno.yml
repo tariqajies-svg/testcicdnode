@@ -10,7 +10,7 @@ on:
 
 jobs:
   test:
-    runs-on: ip-172-31-33-185
+    runs-on: tariq
 
     steps:
       - name: Checkout code
