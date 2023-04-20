@@ -19,7 +19,7 @@ permissions:
 
 jobs:
   test:
-    runs-on: instanceelk
+    runs-on: ubuntu-22
 
     steps:
       - name: Setup repo
