@@ -10,7 +10,7 @@ on:
 
 jobs:
   test:
-    runs-on: instanceelk
+    runs-on: self-hosted
 
     steps:
       - name: Checkout code
